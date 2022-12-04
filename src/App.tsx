@@ -1,16 +1,22 @@
-import { style } from '@vanilla-extract/css';
-import { themeClass, vars } from './theme.css';
-
-const heading = style({
-    color: vars.color.brand
-});
+import { PropsWithChildren, useContext } from 'react';
+import { lightTheme, darkTheme } from './theme.css';
+import { DarkModeContext, DarkModeProvider } from './context/DarkModeContext';
+import { Nested } from './components/nested';
 
 function App() {
     return (
-        <div className={themeClass}>
-            <h1 className={heading}>Start from scratch</h1>
-        </div>
+        <DarkModeProvider>
+            <ThemeProvider>
+                <Nested />
+            </ThemeProvider>
+        </DarkModeProvider>
     );
 }
 
 export default App;
+
+function ThemeProvider({ children }: PropsWithChildren) {
+    const { darkMode } = useContext(DarkModeContext) || {};
+
+    return <div className={darkMode ? darkTheme : lightTheme}>{children}</div>;
+}
