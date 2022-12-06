@@ -16,7 +16,9 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "paths": {
-            "@theme": ["./src/theme.css.ts"]
+            "@theme": ["./src/theme.css.ts"],
+            "@globalCss": ["./src/globalStyles.css.ts"],
+            "@styles": ["./src/styles"]
         }
     },
     "include": ["src"],

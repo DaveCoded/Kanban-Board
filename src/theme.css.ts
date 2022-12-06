@@ -11,7 +11,7 @@ const hslColors = {
     grey5: '220deg 69% 97%',
     greyStroke: '216deg 15 57',
     mainPurple: '242deg 48% 58%',
-    lightPurple: '243° 100% 82%',
+    lightPurple: '243deg 100% 82%',
     red: '0deg 78% 63%',
     lightRed: '0deg 100% 80%'
 };
@@ -33,14 +33,16 @@ const baseColors: typeof hslColors = {
 };
 
 const global = createGlobalTheme('html', {
-    dropShadow: '0px 4px 6px 0px hsl(220deg 40% 35% / 0.1)',
-    fonts: {
-        heading: 'Inter, sans-serif',
-        body: 'system-ui'
+    cardShadow: '0px 4px 6px 0px hsl(220deg 40% 35% / 0.1)',
+    font: {
+        weight: {
+            normal: '500',
+            bold: '700'
+        },
+        family: 'PlusJakartaSans'
     }
 });
 
-// todo: fill these out from the design system
 const colors = createThemeContract({
     text: {
         primary: null,
@@ -84,6 +86,9 @@ const colors = createThemeContract({
         selectedText: null,
         optionText: null,
         menuBackground: null
+    },
+    card: {
+        background: null
     }
 });
 
@@ -130,6 +135,9 @@ export const lightTheme = createTheme(colors, {
         selectedText: baseColors.black,
         optionText: baseColors.grey3,
         menuBackground: baseColors.white
+    },
+    card: {
+        background: baseColors.white
     }
 });
 
@@ -176,6 +184,9 @@ export const darkTheme = createTheme(colors, {
         selectedText: baseColors.white,
         optionText: baseColors.grey3,
         menuBackground: baseColors.grey0
+    },
+    card: {
+        background: baseColors.grey1
     }
 });
 

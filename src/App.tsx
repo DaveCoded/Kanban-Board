@@ -1,7 +1,8 @@
 import { PropsWithChildren, useContext } from 'react';
-import { lightTheme, darkTheme } from './theme.css';
 import { DarkModeContext, DarkModeProvider } from './context/DarkModeContext';
 import { Nested } from './components/nested';
+import { lightTheme, darkTheme } from './theme.css';
+import './globalStyles.css';
 
 function App() {
     return (
@@ -15,7 +16,9 @@ function App() {
 
 export default App;
 
-function ThemeProvider({ children }: PropsWithChildren) {
+// todo: this should be its own file for ease of reuse in Storybook files (for instance)
+// todo: look up if there's an easy way to wrap all Storybook files in this provider
+export function ThemeProvider({ children }: PropsWithChildren) {
     const { darkMode } = useContext(DarkModeContext) || {};
 
     return <div className={darkMode ? darkTheme : lightTheme}>{children}</div>;
