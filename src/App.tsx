@@ -16,8 +16,6 @@ function App() {
 
 export default App;
 
-// todo: this should be its own file for ease of reuse in Storybook files (for instance)
-// todo: look up if there's an easy way to wrap all Storybook files in this provider
 export function ThemeProvider({ children }: PropsWithChildren) {
     const { darkMode } = useContext(DarkModeContext) || {};
 
