@@ -43,7 +43,10 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
     title: 'Hello',
-    description: 'I work now'
+    subtasks: {
+        completed: 1,
+        total: 3
+    }
 };
 
 // export const Secondary = Template.bind({});

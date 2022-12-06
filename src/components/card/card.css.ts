@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css';
 import { bodyMedium, headingMedium } from '@styles';
 import { vars } from '@theme';
 
-export const card = style({
+export const cardClass = style({
     backgroundColor: vars.colors.card.background,
     color: vars.colors.text.primary,
     padding: '16px 23px',
@@ -10,14 +10,15 @@ export const card = style({
     boxShadow: vars.cardShadow
 });
 
-export const title = style([
+export const titleClass = style([
     headingMedium,
     {
-        color: vars.colors.text.primary
+        color: vars.colors.text.primary,
+        marginBottom: 8
     }
 ]);
 
-export const description = style([
+export const subTasksClass = style([
     bodyMedium,
     {
         color: vars.colors.text.secondary
