@@ -8,10 +8,11 @@ export default defineConfig({
     plugins: [react(), vanillaExtractPlugin()],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src'),
+            '@src': path.resolve(__dirname, './src'),
             '@theme': path.resolve(__dirname, './src/theme.css.ts'),
             '@globalCSS': path.resolve(__dirname, './src/globalStyles.css.ts'),
-            '@styles': path.resolve(__dirname, './src/styles')
+            '@styles': path.resolve(__dirname, './src/styles'),
+            '@icons': path.resolve(__dirname, './src/icons')
         }
     }
 });

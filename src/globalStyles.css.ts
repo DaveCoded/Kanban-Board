@@ -31,6 +31,15 @@ globalStyle('h1, h2, h3, h4, h5, p', {
     margin: 0
 });
 
+globalStyle('button', {
+    border: 'none',
+    margin: 0,
+    background: 'none',
+    cursor: 'pointer'
+});
+
 globalStyle('body', {
-    fontFamily: vars.font.family
+    fontFamily: vars.font.family,
+    WebkitFontSmoothing: 'none',
+    fontSmooth: 'never'
 });

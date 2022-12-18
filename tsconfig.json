@@ -16,10 +16,11 @@
         "noEmit": true,
         "jsx": "react-jsx",
         "paths": {
-            "@": ["./src"],
+            "@src": ["./src"],
             "@theme": ["./src/theme.css.ts"],
             "@globalCss": ["./src/globalStyles.css.ts"],
-            "@styles": ["./src/styles"]
+            "@styles": ["./src/styles"],
+            "@icons": ["./src/icons"]
         }
     },
     "include": ["src"],

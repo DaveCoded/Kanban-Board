@@ -1,8 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { darkTheme, lightTheme } from '@theme';
 import '@globalCSS';
-import { PropsWithChildren, useContext } from 'react';
-import { DarkModeContext, DarkModeProvider } from '../../context/DarkModeContext';
+import { PropsWithChildren } from 'react';
 
 import { Card } from './card';
 
@@ -17,11 +15,9 @@ const CardWrapper = ({ children }: PropsWithChildren) => {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Card> = args => (
-    // <DarkModeProvider>
     <CardWrapper>
         <Card {...args} />
     </CardWrapper>
-    // </DarkModeProvider>
 );
 
 export const Primary = Template.bind({});

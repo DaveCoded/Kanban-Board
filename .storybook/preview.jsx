@@ -31,7 +31,7 @@ const ThemeProvider = ({ children }) => {
     return (
         <div className={darkMode ? darkTheme : lightTheme}>
             {children}
-            <div>
+            <div style={{ marginTop: '24px' }}>
                 <button onClick={toggleDarkMode}>Toggle dark mode</button>
             </div>
         </div>
