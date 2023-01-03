@@ -39,7 +39,5 @@ globalStyle('button', {
 });
 
 globalStyle('body', {
-    fontFamily: vars.font.family,
-    WebkitFontSmoothing: 'none',
-    fontSmooth: 'never'
+    fontFamily: vars.font.family
 });
